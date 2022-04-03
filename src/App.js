@@ -1,5 +1,5 @@
 import CharacterCard from './characterCard'
-import Header from './header'
+//import Header from './header'
 import './App.css';
 
 function App() {
