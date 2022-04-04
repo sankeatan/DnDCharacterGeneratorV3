@@ -1,12 +1,12 @@
 import './index.css';
 
-function Feature() {
+function Feature({title, content}) {
 
 return(
 <>
-<h4>Martial Arts During A Turn </h4>
-    <p>Counting actions and bonus actions, make two unarmed attacks or one 
-    weapon attack plus one unarmed attack in turn. </p>
+<br/>
+<h4>{title} </h4>
+    <p> {content}</p>
 </>
     )
 }

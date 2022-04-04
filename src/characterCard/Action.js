@@ -1,13 +1,11 @@
 import './index.css';
 
-function Action() {
+function Action({ title, content }) {
 
 return(
 <>
-<h4>Martial Arts </h4>
-                <p>Melee Weapon Attack: +5 to hit, reach 5ft. 
-                Hit: 1d4+3 bludgeoning damage. 
-                Can also make unarmed strike as a bonus action.</p>
+<h4>{title} </h4>
+    <p>{content}</p>
 </>
     )
 }
