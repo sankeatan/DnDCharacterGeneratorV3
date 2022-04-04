@@ -1,13 +1,15 @@
 import './index.css';
+import Action from './Action.js'
+import { useState } from 'react';
 
 function Actions() {
-
+    const [isActive, setIsActive] = useState(false);
     return (
-    <div className="property-block">
-    <h4>Martial Arts </h4>
-    <p>Melee Weapon Attack: +5 to hit, reach 5ft. 
-        Hit: 1d4+3 bludgeoning damage. 
-        Can also make unarmed strike as a bonus action.</p>
+    <div className='actions' onClick ={() => setIsActive(!isActive)}>
+        <h3>Actions</h3>
+            <div className="property-block">
+                {isActive && <Action/>}
+            </div>
     </div>
     )
 }

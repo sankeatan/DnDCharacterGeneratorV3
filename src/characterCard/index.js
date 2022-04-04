@@ -1,11 +1,9 @@
 import './index.css';
-import { useState } from 'react';
 import Features from './Features';
 import Actions from './Actions';
 import Equipment from './Equipment';
 
 function CharacterCard() {
-    const [isActive, setIsActive] = useState(false);
 
     return (
     <div className="stat-block">
@@ -88,13 +86,11 @@ function CharacterCard() {
             <polyline points="0,0 400,2.5 0,5"></polyline>
           </svg>
           <div>
-            <div className="actions" onClick ={() => setIsActive(!isActive)}>
-                <h3>Features</h3>
-                {isActive && <Features/>}
+            <Features/>
             </div>
-            <div className="actions" onClick ={() => setIsActive(!isActive)}>
-                <h3>Actions</h3>
-                {isActive && <Actions/>}
+            <div> 
+            <Actions/>
+            </div>
             <div className="actions">
                 <h3>Equipment</h3>
                 <div className="property-block">
@@ -109,8 +105,6 @@ function CharacterCard() {
             </div> 
         <hr className="orange-border bottom" />
     </div> 
-    </div>
-    </div>
     </div>
     );
   }

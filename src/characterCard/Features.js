@@ -1,12 +1,15 @@
 import './index.css';
+import Feature from './Feature.js'
+import { useState } from 'react';
 
 function Features() {
-
+    const [isActive, setIsActive] = useState(false);
     return (
-    <div className="property-block">
-    <h4>Martial Arts During A Turn </h4>
-    <p>Counting actions and bonus actions, make two unarmed attacks or one 
-    weapon attack plus one unarmed attack in turn. </p>
+    <div className="actions" onClick ={() => setIsActive(!isActive)}>
+        <h3>Features</h3>
+            <div className="property-block">
+                {isActive && <Feature/>}
+            </div>
     </div>
     )
 }
