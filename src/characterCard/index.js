@@ -1,103 +1,114 @@
 import './index.css';
+import Accordion from 'react-bootstrap/Accordion'
+import { useState } from 'react';
 
 function CharacterCard() {
+    const [isActive, setIsActive] = useState(false);
+
     return (
-    <div className="stat-block wide">
+    <div className="stat-block">
         <hr className="orange-border" />
         <div className="section-left">
-            <div className="creature-heading">
-                <h1>Animated Armor</h1>
-                <h2>Medium construct, unaligned</h2>
+            <div className="character-heading">
+                <h1>Sankeatan</h1>
+                <h3>Human, Monk, Lvl 1</h3>
             </div> 
             <svg height="5" width="100%" className="tapered-rule">
             <polyline points="0,0 400,2.5 0,5"></polyline>
           </svg>
             <div className="top-stats">
                 <div className="property-line first">
-                    <h4>Armor className</h4>
-                    <p>18 (natural armor)</p>
+                    <h4>Armor class</h4>
+                    <p> 15 (natural armor)</p>
                 </div>
                 <div className="property-line">
                     <h4>Hit Points</h4>
-                    <p>33 (6d8 + 6)</p>
+                    <p> 10 (1d8)</p>
                 </div> 
-                <div className="property-line last">
+                <div className="property-line">
                     <h4>Speed</h4>
-                    <p>25ft.</p>
-                </div> 
+                    <p> 30ft.</p>
+                </div>
+                <div className="property-line last">
+                    <h4>Background </h4>
+                    <p> Acolyte</p>
+                </div>
                 <svg height="5" width="100%" className="tapered-rule">
             <polyline points="0,0 400,2.5 0,5"></polyline>
           </svg>
                 <div className="abilities">
                     <div className="ability-strength">
                         <h4>STR</h4>
-                        <p>14 (+2)</p>
+                        <p>13 (+1)</p>
                     </div>
                     <div className="ability-dexterity">
                         <h4>DEX</h4>
-                        <p>11 (+0)</p>
+                        <p>16 (+3)</p>
                     </div>
                     <div className="ability-constitution">
                         <h4>CON</h4>
-                        <p>13 (+1)</p>
+                        <p>14 (+2)</p>
                     </div>
                     <div className="ability-intelligence">
                         <h4>INT</h4>
-                        <p>1 (-5)</p>
+                        <p>11 (+0)</p>
                     </div>
                     <div className="ability-wisdom">
                         <h4>WIS</h4>
-                        <p>3 (-4)</p>
+                        <p>15 (+2)</p>
                     </div> 
                     <div className="ability-charisma">
                         <h4>CHA</h4>
-                        <p>1 (-5)</p>
+                        <p>9 (-1)</p>
                     </div>
                 </div>
                 <svg height="5" width="100%" className="tapered-rule">
             <polyline points="0,0 400,2.5 0,5"></polyline>
           </svg>
                 <div className="property-line first">
-                    <h4>Damage Immunities</h4>
-                    <p>poison, psychic</p>
+                    <h4>Proficency </h4>
+                    <p>+2</p>
+                </div> 
+                <div className="property-line">
+                    <h4>Saving Throws </h4>
+                    <p> Str +3, Dex +5</p>
                 </div>
                 <div className="property-line">
-                    <h4>Condition Immunities</h4>
-                    <p>blinded, charmed, deafened, exhaustion, frightened,
-                            petrified, poisoned</p>
+                    <h4>Skills </h4>
+                    <p>Acrobatics +5, Insight +4, Religion +2, Stealth +5</p>
                 </div>
                 <div className="property-line">
-                    <h4>Senses</h4>
-                    <p>blindsight 60ft. (blind beyond this radius), passive Perception 6</p>
-                </div>
-                <div className="property-line">
-                    <h4>Languages</h4>
-                    <p>&mdash;</p>
-                </div>
-                <div className="property-line last">
-                    <h4>Challenge</h4>
-                    <p>1 (200 XP)</p>
+                    <h4>Languages </h4>
+                    <p>Common, Gnomish, Orc, Celestial</p>
                 </div>
             </div>
             <svg height="5" width="100%" className="tapered-rule">
             <polyline points="0,0 400,2.5 0,5"></polyline>
           </svg>
-            <div className="property-block">
-                <h4>Antimagic Suceptibility.</h4>
-                <p>The armor is incapacitated while in the area of an <i>antimagic
-                field</i>.  If targeted by <i>dispel magic</i>, the armor must succeed
-                on a Constitution saving throw against the caster’s spell save DC or
-                fall unconscious for 1 minute.</p>
-            </div>
-            <div className="property-block">
-                <h4>False Appearance.</h4>
-                <p>While the armor remains motionless, it is indistinguishable from a
-                normal suit of armor.</p>
-            </div>
-        </div> 
-        <div className="section-right">
+          <Accordion defaultActiveKey='0'>
+            <Accordion.Item as="div" ventKey="0" className="actions">
+                <Accordion.Header as='h3'>Features</Accordion.Header>
+                    <Accordion.Body>
+                        <Accordion.Collapse>
+                        <div className="property-block">
+                        <h4>Martial Arts During A Turn </h4>
+                        <p>Counting actions and bonus actions, make two unarmed attacks or one 
+                        weapon attack plus one unarmed attack in turn. </p>
+                        </div>
+                        </Accordion.Collapse>
+                    </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey='1' className="actions">
+                <Accordion.Header><h3>Actions</h3></Accordion.Header>
+                    <Accordion.Body>
+                        <div className="property-block">
+                        <h4>Multiattack.</h4>
+                        <p>The armor makes two melee attacks.</p>
+                        </div>
+                    </Accordion.Body> 
+            </Accordion.Item>
             <div className="actions">
-                <h3>Actions</h3>
+                <h3>Equipment</h3>
                 <div className="property-block">
                     <h4>Multiattack.</h4>
                     <p>The armor makes two melee attacks.</p>
@@ -105,24 +116,13 @@ function CharacterCard() {
                 <div className="property-block">
                     <h4>Slam.</h4>
                     <p><i>Melee Weapon Attack:</i> +4 to hit, reach 5 ft., one target.
-            <i>Hit:</i> 5 (1d6 + 2) bludgeoning damage.</p>
-                </div> 
-            </div>
-            <div className="actions">
-                <h3>Legendary Actions</h3>
-                <div className="property-block">
-                    <h4>Multiattack.</h4>
-                    <p>The armor makes two melee attacks.</p>
-                </div>
-                <div className="property-block">
-                    <h4>Slam.</h4>
-                    <p><i>Melee Weapon Attack:</i> +4 to hit, reach 5 ft., one target.
-            <i>Hit:</i> 5 (1d6 + 2) bludgeoning damage.</p>
+                    <i>Hit:</i> 5 (1d6 + 2) bludgeoning damage.</p>
                 </div>
             </div> 
-        </div> 
+            </Accordion>
         <hr className="orange-border bottom" />
     </div> 
+    </div>
     );
   }
   

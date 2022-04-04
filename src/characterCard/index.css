@@ -76,7 +76,7 @@ body {
     fill: #922610;
     stroke: #922610;
   }
-  .creature-heading h1{
+  .character-heading h1{
     font-family: 'Libre Baskerville', 'Lora', 'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif;
     color: #922610;
     font-size: 23px;
@@ -86,12 +86,23 @@ body {
     font-variant: small-caps;
     font-weight: bold;
   }
-  .creature-heading h2{
+  .character-heading h2{
     font-weight: normal;
     font-style: italic;
     font-size: 12px;
     line-height: 1.2em;
     margin: 0 0 10px;
+  }
+
+  .character-heading h3{
+    font-family: 'Libre Baskerville', 'Lora', 'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif;
+    color: #922610;
+    font-size: 15px;
+    line-height: 1.2em;
+    margin: 10px 0 0;
+    letter-spacing: 1px;
+    font-variant: small-caps;
+    font-weight: bold;
   }
   .property-line h4,
   .property-line p{
@@ -162,7 +173,7 @@ body {
     padding: 0 0 10px;
     text-indent: 5px;
   }
-  .actions{
+  .actions{ 
     margin: 0 0 20px;
   }
   .actions:last-child{
