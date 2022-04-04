@@ -1,6 +1,8 @@
 import './index.css';
-import Accordion from 'react-bootstrap/Accordion'
 import { useState } from 'react';
+import Features from './Features';
+import Actions from './Actions';
+import Equipment from './Equipment';
 
 function CharacterCard() {
     const [isActive, setIsActive] = useState(false);
@@ -85,28 +87,14 @@ function CharacterCard() {
             <svg height="5" width="100%" className="tapered-rule">
             <polyline points="0,0 400,2.5 0,5"></polyline>
           </svg>
-          <Accordion defaultActiveKey='0'>
-            <Accordion.Item as="div" ventKey="0" className="actions">
-                <Accordion.Header as='h3'>Features</Accordion.Header>
-                    <Accordion.Body>
-                        <Accordion.Collapse>
-                        <div className="property-block">
-                        <h4>Martial Arts During A Turn </h4>
-                        <p>Counting actions and bonus actions, make two unarmed attacks or one 
-                        weapon attack plus one unarmed attack in turn. </p>
-                        </div>
-                        </Accordion.Collapse>
-                    </Accordion.Body>
-            </Accordion.Item>
-            <Accordion.Item eventKey='1' className="actions">
-                <Accordion.Header><h3>Actions</h3></Accordion.Header>
-                    <Accordion.Body>
-                        <div className="property-block">
-                        <h4>Multiattack.</h4>
-                        <p>The armor makes two melee attacks.</p>
-                        </div>
-                    </Accordion.Body> 
-            </Accordion.Item>
+          <div>
+            <div className="actions" onClick ={() => setIsActive(!isActive)}>
+                <h3>Features</h3>
+                {isActive && <Features/>}
+            </div>
+            <div className="actions" onClick ={() => setIsActive(!isActive)}>
+                <h3>Actions</h3>
+                {isActive && <Actions/>}
             <div className="actions">
                 <h3>Equipment</h3>
                 <div className="property-block">
@@ -119,9 +107,10 @@ function CharacterCard() {
                     <i>Hit:</i> 5 (1d6 + 2) bludgeoning damage.</p>
                 </div>
             </div> 
-            </Accordion>
         <hr className="orange-border bottom" />
     </div> 
+    </div>
+    </div>
     </div>
     );
   }
