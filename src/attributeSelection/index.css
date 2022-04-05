@@ -179,7 +179,19 @@ body {
   .actions:last-child{
     margin: 0;
   }
-
+  .nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+  }
+  .nav-bar h4{
+    margin: 10px 0 2px;
+    font-size: 12px;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    color: #7A200D;
+  }
   
   @media print{
       .orange-border{

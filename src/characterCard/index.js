@@ -6,16 +6,16 @@ import Equipment from './Equipment';
 function CharacterCard() {
 
     return (
-    <div className="stat-block">
+    <div className="stat-block section-left">
         <hr className="orange-border" />
-        <div className="section-left">
+        <div>
             <div className="character-heading">
                 <h1>Sankeatan</h1>
                 <h3>Human, Monk, Lvl 1</h3>
             </div> 
             <svg height="5" width="100%" className="tapered-rule">
             <polyline points="0,0 400,2.5 0,5"></polyline>
-          </svg>
+            </svg>
             <div className="top-stats">
                 <div className="property-line first">
                     <h4>Armor class</h4>
@@ -34,8 +34,8 @@ function CharacterCard() {
                     <p> Acolyte</p>
                 </div>
                 <svg height="5" width="100%" className="tapered-rule">
-            <polyline points="0,0 400,2.5 0,5"></polyline>
-          </svg>
+                <polyline points="0,0 400,2.5 0,5"></polyline>
+                </svg>
                 <div className="abilities">
                     <div className="ability-strength">
                         <h4>STR</h4>
