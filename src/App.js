@@ -5,7 +5,7 @@ import './App.css';
 
 function App() {
   return (
-    <div>
+    <div className='character-creation-container'>
     <CharacterCard/>
     <AttributeSelection/>
     </div>

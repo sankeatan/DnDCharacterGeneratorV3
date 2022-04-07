@@ -1,0 +1,9 @@
+.character-creation-container{
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.character-creation-container>{
+    flex: 1 1 80px;
+}

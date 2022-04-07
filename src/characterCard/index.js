@@ -2,11 +2,13 @@ import './index.css';
 import Features from './Features';
 import Actions from './Actions';
 import Equipment from './Equipment';
+import { characterData } from '../characterData.js'
+import { useState, useContext, createContext } from 'react';
+
 
 function CharacterCard() {
-
     return (
-    <div className="stat-block section-left">
+    <div className="stat-block wide section-left">
         <hr className="orange-border" />
         <div>
             <div className="character-heading">
@@ -98,7 +100,7 @@ function CharacterCard() {
                     <p>The armor makes two melee attacks.</p>
                 </div>
                 <div className="property-block">
-                    <h4>Slam.</h4>
+                    <h4>Slam</h4>
                     <p><i>Melee Weapon Attack:</i> +4 to hit, reach 5 ft., one target.
                     <i>Hit:</i> 5 (1d6 + 2) bludgeoning damage.</p>
                 </div>
