@@ -2,7 +2,7 @@ import './index.css'
 import { useState } from 'react';
 
 function NavBar({ currentPage, handlePageChange }) {
-    const [navSelection, setNavSelection] = useState('Race');
+    const [navSelection, setNavSelection] = useState('Races');
     return(
         <div className='nav-bar'>
             <button onClick={() => handlePageChange('Races')}>
@@ -15,7 +15,7 @@ function NavBar({ currentPage, handlePageChange }) {
                 <h4>Backgrounds</h4></button>
             <button onClick={() => handlePageChange('Languages')}>
                 <h4>Languages</h4></button>
-            <button onClick={() => handlePageChange('Proficiences')}>
+            <button onClick={() => handlePageChange('Proficiencies')}>
                 <h4>Proficiencies</h4></button>
             <button onClick={() => handlePageChange('Feats')}>
                 <h4>Feats</h4></button>

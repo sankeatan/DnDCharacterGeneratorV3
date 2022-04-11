@@ -4,7 +4,7 @@ import { useState } from 'react';
 function Proficiencies() {
     
     return(
-        <div>
+        <div className='classes-container'>
             Proficiencies
         </div>
     )

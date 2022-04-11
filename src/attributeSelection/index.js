@@ -13,7 +13,7 @@ import Inventory from './Inventory.js'
 
 function AttributeSelection () {
 
-    const [currentPage, setCurrentPage] = useState('Race')
+    const [currentPage, setCurrentPage] = useState('Races')
 
     const renderPage = () => {
         switch (currentPage) {
@@ -47,7 +47,7 @@ function AttributeSelection () {
                 currentPage={currentPage}
                 handlePageChange={handlePageChange}/>
             <hr className='orange-border bottom'/>
-            <hr className='orange-border'/>
+            <hr className='orange-border mb-3'/>
             {renderPage()}
             <hr className='orange-border bottom'/>
         </div>

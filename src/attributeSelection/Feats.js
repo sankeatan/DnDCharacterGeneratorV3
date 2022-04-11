@@ -4,8 +4,8 @@ import { useState } from 'react';
 function Feats() {
     
     return(
-        <div>
-            
+        <div className='classes-container'>
+            feats
         </div>
     )
 }

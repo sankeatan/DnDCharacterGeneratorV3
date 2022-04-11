@@ -4,7 +4,7 @@ import { useState } from 'react';
 function Languages() {
     
     return(
-        <div>
+        <div className='classes-container'>
             Languages
         </div>
     )

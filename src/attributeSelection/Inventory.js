@@ -4,7 +4,7 @@ import { useState } from 'react';
 function Inventory() {
     
     return(
-        <div>
+        <div className='classes-container'>
             Inventory
         </div>
     )

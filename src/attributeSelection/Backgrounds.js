@@ -4,7 +4,7 @@ import { useState } from 'react';
 function Backgrounds() {
     
     return(
-        <div>
+        <div className='classes-container'>
             Backgrounds
         </div>
     )

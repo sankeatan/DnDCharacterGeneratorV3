@@ -195,8 +195,18 @@ body {
 
   .classes-container{
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     margin: 16px 0 2px;
+  }
+
+  .stat-array{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .stat-array h4{
+    margin: 0px 7px 0px;
   }
   
   @media print{

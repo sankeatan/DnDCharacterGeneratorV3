@@ -48,7 +48,7 @@ function Races() {
         femaleIcon: '',
         }];
     return(
-        <div className-='classes-container'>
+        <div className='classes-container'>
             {raceArray.map(({ name, maleIcon, femaleIcon })=>(
                 <button className='character-heading'><h3>{ name }</h3></button>
             ))}
