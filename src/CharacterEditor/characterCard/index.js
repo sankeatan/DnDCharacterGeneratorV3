@@ -2,7 +2,7 @@ import './index.css';
 import Features from './Features';
 import Actions from './Actions';
 import Equipment from './Equipment';
-import { characterData } from '../characterData.js'
+import { characterData } from '../../characterData.js'
 import { useState, useContext, createContext } from 'react';
 
 

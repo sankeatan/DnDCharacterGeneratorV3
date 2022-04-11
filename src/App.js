@@ -1,14 +1,10 @@
-import CharacterCard from './characterCard'
-import AttributeSelection from './attributeSelection'
+import CharacterEditor from './CharacterEditor'
 //import Header from './header'
 import './App.css';
 
 function App() {
   return (
-    <div className='character-creation-container'>
-    <CharacterCard/>
-    <AttributeSelection/>
-    </div>
+    <CharacterEditor />
   );
 }
 
