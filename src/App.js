@@ -1,10 +1,12 @@
-import CharacterEditor from './CharacterEditor'
 //import Header from './header'
+import CharacterEditor from './CharacterEditor'
 import './App.css';
 
 function App() {
   return (
-    <CharacterEditor />
+    <div>
+      <CharacterEditor />
+    </div>
   );
 }
 
