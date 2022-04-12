@@ -19,7 +19,6 @@ root.render(
         </Routes>
       </Layout>
     </BrowserRouter>
-    <CharacterEditor />
   </React.StrictMode>
 );
 
