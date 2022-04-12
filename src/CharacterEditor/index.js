@@ -1,9 +1,18 @@
+import React from 'react'
 import CharacterCard from './characterCard'
 import AttributeSelection from './attributeSelection'
 
-export default function CharacterEditor() {
-    <div className='character-creation-container'>
-    <CharacterCard/>
-    <AttributeSelection/>
-    </div>
+class CharacterEditor extends React.Component {
+    render() {
+        return (
+        <>
+        <div className='character-creation-container'>
+            <CharacterCard/>
+            <AttributeSelection/>
+        </div>
+        </>
+        )
+    }
 }
+
+export default CharacterEditor;
