@@ -3,17 +3,24 @@ import Features from './Features';
 import Actions from './Actions';
 import Equipment from './Equipment';
 import { characterData } from '../../characterData.js'
-import { useState, useContext, createContext } from 'react';
+import { useState, useContext } from 'react';
+import { CharacterContext } from '../../App';
 
 
 function CharacterCard() {
+    const character = useContext(CharacterContext)
+    const [editedCharacter, updateEditedCharacter] = useState(character);
+
     return (
     <div className="stat-block wide section-left">
         <hr className="orange-border" />
         <div>
             <div className="character-heading">
-                <h1>Sankeatan</h1>
-                <h3>Human, Monk, Lvl 1</h3>
+                <h1>{editedCharacter.name}</h1>
+                <h3>
+                    {editedCharacter.race},  
+                    {' '}{editedCharacter.class},
+                    Lvl {editedCharacter.level}</h3>
             </div> 
             <svg height="5" width="100%" className="tapered-rule">
             <polyline points="0,0 400,2.5 0,5"></polyline>
@@ -21,19 +28,19 @@ function CharacterCard() {
             <div className="top-stats">
                 <div className="property-line first">
                     <h4>Armor class</h4>
-                    <p> 15 (natural armor)</p>
+                    <p> {editedCharacter.armor.number} ({editedCharacter.armor.kind} armor)</p>
                 </div>
                 <div className="property-line">
                     <h4>Hit Points</h4>
-                    <p> 10 (1d8)</p>
+                    <p> {editedCharacter.hp} ({editedCharacter.hitDie})</p>
                 </div> 
                 <div className="property-line">
                     <h4>Speed</h4>
-                    <p> 30ft.</p>
+                    <p> {editedCharacter.speed}</p>
                 </div>
                 <div className="property-line last">
                     <h4>Background </h4>
-                    <p> Acolyte</p>
+                    <p> {editedCharacter.background}</p>
                 </div>
                 <svg height="5" width="100%" className="tapered-rule">
                 <polyline points="0,0 400,2.5 0,5"></polyline>
@@ -41,27 +48,27 @@ function CharacterCard() {
                 <div className="abilities">
                     <div className="ability-strength">
                         <h4>STR</h4>
-                        <p>13 (+1)</p>
+                        <p>{editedCharacter.str} (+1)</p>
                     </div>
                     <div className="ability-dexterity">
                         <h4>DEX</h4>
-                        <p>16 (+3)</p>
+                        <p>{editedCharacter.dex} (+3)</p>
                     </div>
                     <div className="ability-constitution">
                         <h4>CON</h4>
-                        <p>14 (+2)</p>
+                        <p>{editedCharacter.con} (+2)</p>
                     </div>
                     <div className="ability-intelligence">
                         <h4>INT</h4>
-                        <p>11 (+0)</p>
+                        <p>{editedCharacter.int} (+0)</p>
                     </div>
                     <div className="ability-wisdom">
                         <h4>WIS</h4>
-                        <p>15 (+2)</p>
+                        <p>{editedCharacter.wis} (+2)</p>
                     </div> 
                     <div className="ability-charisma">
                         <h4>CHA</h4>
-                        <p>9 (-1)</p>
+                        <p>{editedCharacter.cha} (-1)</p>
                     </div>
                 </div>
                 <svg height="5" width="100%" className="tapered-rule">
@@ -69,7 +76,7 @@ function CharacterCard() {
           </svg>
                 <div className="property-line first">
                     <h4>Proficency </h4>
-                    <p>+2</p>
+                    <p>{editedCharacter.proficiencyBonus}</p>
                 </div> 
                 <div className="property-line">
                     <h4>Saving Throws </h4>

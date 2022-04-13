@@ -18,23 +18,23 @@ function AttributeSelection () {
     const renderPage = () => {
         switch (currentPage) {
             case 'Races':
-                return (<Races/>)
+                return (<Races key='races'/>)
             case 'Classes':
-                return (<Classes/>)
+                return (<Classes key='classes'/>)
             case 'Ability Scores':
-                return (<AbilityScores/>)
+                return (<AbilityScores key='abilityScores'/>)
             case 'Backgrounds':
-                return (<Backgrounds/>)
+                return (<Backgrounds key='backgrounds'/>)
             case 'Languages':
-                return (<Languages/>)
+                return (<Languages key='languages'/>)
             case 'Proficiencies':
-                return (<Proficiencies/>)
+                return (<Proficiencies key='proficiencies'/>)
             case 'Feats':
-                return (<Feats/>)
+                return (<Feats key='feats'/>)
             case 'Inventory':
-                return (<Inventory/>)
+                return (<Inventory key='inventory'/>)
             default:
-                return (<Races/>)
+                return (<Races key='races'/>)
         }
     };
 

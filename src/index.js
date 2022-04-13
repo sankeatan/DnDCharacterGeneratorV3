@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout'
-import CharacterEditor from './CharacterEditor';
+//import CharacterEditor from './CharacterEditor';
 
 const container = document.getElementById('root');
 const root = createRoot(container);

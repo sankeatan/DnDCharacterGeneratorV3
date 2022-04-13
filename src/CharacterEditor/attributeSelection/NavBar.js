@@ -1,8 +1,6 @@
 import './index.css'
-import { useState } from 'react';
 
 function NavBar({ currentPage, handlePageChange }) {
-    const [navSelection, setNavSelection] = useState('Races');
     return(
         <div className='nav-bar'>
             <button onClick={() => handlePageChange('Races')}>

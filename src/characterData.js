@@ -1,4 +1,4 @@
-export const characterData = [
+export const characterData = 
   {
     name: 'Sankeatan',
     race: 'Human',
@@ -26,4 +26,3 @@ export const characterData = [
     actions: ['martial arts'],
     equipment: [],
   }
-]

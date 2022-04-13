@@ -1,9 +1,11 @@
-import { useState } from 'react'
+import React, { useState, createContext } from 'react'
 import { characterData } from './characterData';
 import CharacterEditor from './characterEditor'
 import './App.css';
 
-function App() {
+export const CharacterContext = createContext();
+
+export default function App() {
   const [character, setCharacter] = useState({ characterData })
 
   const updateCharacter = ( value ) => {
@@ -17,9 +19,9 @@ function App() {
 
   return (
     <div>
-    <CharacterEditor character={character} updateCharacter={updateCharacter}/>
+      <CharacterContext.Provider value={character.characterData}>
+        <CharacterEditor/>
+      </CharacterContext.Provider>
     </div>
   );
 }
-
-export default App;
