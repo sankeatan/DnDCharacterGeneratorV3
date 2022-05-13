@@ -1,8 +1,8 @@
 import './index.css';
 import Features from './Features';
 import Actions from './Actions';
-import Equipment from './Equipment';
-import { characterData } from '../../characterData.js'
+import Inventory from './Inventory';
+//import { characterData } from '../../characterData.js'
 import { useState, useContext } from 'react';
 import { CharacterContext } from '../../App';
 
@@ -100,18 +100,9 @@ function CharacterCard() {
             <div> 
             <Actions/>
             </div>
-            <div className="actions">
-                <h3>Equipment</h3>
-                <div className="property-block">
-                    <h4>Multiattack.</h4>
-                    <p>The armor makes two melee attacks.</p>
-                </div>
-                <div className="property-block">
-                    <h4>Slam</h4>
-                    <p><i>Melee Weapon Attack:</i> +4 to hit, reach 5 ft., one target.
-                    <i>Hit:</i> 5 (1d6 + 2) bludgeoning damage.</p>
-                </div>
-            </div> 
+            <div>
+            <Inventory/>
+            </div>
         <hr className="orange-border bottom" />
     </div> 
     </div>
